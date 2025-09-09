@@ -2,6 +2,32 @@
 
 Small, production-lean service exposing SIP planning and portfolio health endpoints.
 
+# Project Structure
+sip-planner-maven/
+├─ src/
+│  ├─ main/
+│  │  ├─ java/
+│  │  │  └─ com/example/sipplanner/
+│  │  │      ├─ SipPlannerApplication.java
+│  │  │      ├─ api/
+│  │  │      │   ├─ GlobalExceptionHandler.java
+│  │  │      │   ├─ SipController.java
+│  │  │      │   ├─ SipRequest.java
+│  │  │      │   └─ SipResponse.java
+│  │  │      └─ service/
+│  │  │          └─ SipService.java
+│  │  └─ resources/
+│  │      └─ application.properties
+│  └─ test/
+│     └─ java/
+│         └─ com/example/sipplanner/service/
+│             └─ SipServiceTest.java
+├─ pom.xml
+├─ Dockerfile
+├─ README.md
+└─ postman_collection.json
+
+
 ## What you get
 - `POST /v1/sip/calc` - calculate SIP corpus
 - `GET /v1/health` - service status + commit hash (via `GIT_COMMIT` env)
