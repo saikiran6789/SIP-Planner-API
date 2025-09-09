@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "SIP Planner API",
+    "_postman_id": "sip-planner-collection",
+    "description": "Collection for SIP Planner API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "SIP Calc",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"monthlyInvestment\": 5000, \"annualRatePercent\": 12, \"years\": 10}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/v1/sip/calc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "v1",
+            "sip",
+            "calc"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/v1/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "v1",
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Metrics",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/v1/metrics",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "v1",
+            "metrics"
+          ]
+        }
+      }
+    }
+  ]
+}
